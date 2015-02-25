@@ -1,0 +1,44 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+% Multi-Column Settings
+\setlength{\columnsep}{1cm}
+
+% Enumerables Formatting
+% From Stephen Checkoway's LaTeX template: www.cs.jhu.edu/~s/
+\setlist[enumerate, 1]{label=\textbf{\alph*.}}
+
+\title{}
+\author{Jordan Matelsky}
+\date{2015}
+
+
+% From Stephen Checkoway's LaTeX template: www.cs.jhu.edu/~s/
+% Format problem
+\makeatletter
+\newcommand\problem[1]{\par\vspace{4ex}\normalfont\normalsize\noindent
+\textbf{\large #1}\par\nobreak\@afterheading}
+\makeatother
+
+% and some of my own additions [~jmatels1]
+% Automatically add space around vertical 'where' bars
+\newcommand{\where}{\: \rvert \:}
+% Small-caps such-that:
+\newcommand{\st}{\textbf{\textsc{s.t}} \:}
+% Shorthand for epsilon, and epsilon in text mode:
+\newcommand{\ep}{\epsilon}
+\newcommand{\Ep}{$\epsilon\:$}
+
+
+\begin{document}
+\maketitle
+
+
+
+
+
+\end{document}

@@ -5,6 +5,25 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 
+% Auto-replaces ( and ) with \left( and \right).
+% Not always a great idea, but it's certainly
+% prettier on average.
+% http://tex.stackexchange.com/questions/31526/macro-for-left-and-right/58641#58641
+\makeatletter
+\def\resetMathstrut@{%
+  \setbox\z@\hbox{%
+    \mathchardef\@tempa\mathcode`\[\relax
+    \def\@tempb##1"##2##3{\the\textfont"##3\char"}%
+    \expandafter\@tempb\meaning\@tempa \relax
+  }%
+  \ht\Mathstrutbox@\ht\z@ \dp\Mathstrutbox@\dp\z@}
+\makeatother
+\begingroup
+  \catcode`(\active \xdef({\left\string(}
+  \catcode`)\active \xdef){\right\string)}
+\endgroup
+\mathcode`(="8000 \mathcode`)="8000
+
 % Multi-Column Settings
 \setlength{\columnsep}{1cm}
 

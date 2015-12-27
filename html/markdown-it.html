@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/5.0.2/markdown-it.js" charset="utf-8"></script>
+<div id="md-raw">
+# My Paper
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim illo minima a beatae ipsam, laboriosam nemo et, consequuntur quas totam, illum exercitationem asperiores nihil obcaecati eaque culpa minus est.
+​
+```
+    def main():
+        print "Here's some code!"
+```
+​
+-----
+​
+## Section 1
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, repellendus? Temporibus illum, obcaecati. Atque aspernatur esse repudiandae repellat, recusandae dolores est quasi iste, consectetur, fugit sequi culpa. Sit, quasi, aperiam!
+</div>
+        <script type="text/javascript">
+            m = markdownit({
+                html: true,
+                linkify: true,
+                typographer: true
+            });
+            document.getElementById('md-raw').innerHTML = m.render(
+                document.getElementById('md-raw').innerHTML);
+        </script>
+    </body>
+</html>
